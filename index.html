@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #23292e;
+      flex-wrap: wrap;
+    }
+
+    nav .left {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    nav .right ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav .right ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav .right ul li a:hover {
+      color: aqua;
+      font-size: 1.1rem;
+    }
+
+    .firstsection {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    .leftsection {
+      flex: 1 1 400px;
+      font-size: 2rem;
+      padding: 20px;
+    }
+
+    .rightsection {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .rightsection img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .good {
+      color: rgb(255, 222, 34);
+    }
+
+    #element {
+      color: rgb(255, 232, 25);
+    }
+
+    /* Tablet & below */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav .right ul {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .firstsection {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .leftsection {
+        font-size: 1.6rem;
+        padding: 10px;
+      }
+    }
+
+    /* Phones */
+    @media (max-width: 480px) {
+      nav .left {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      nav .right ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .leftsection {
+        font-size: 1.3rem;
+      }
+
+      .firstsection {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">The Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstsection">
+      <div class="leftsection">
+        Hi, my name is <span class="good">Zoro</span> and I am a fully developed and skilled <span id="element"></span>
+      </div>
+      <div class="rightsection">
+        <img src="bg.png.png" alt="Developer illustration">
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Web Coder', 'Web Maker', 'Web Designer'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
